@@ -21,7 +21,6 @@ class LoginScreen extends React.Component {
    }
 
   onClickLogin = () => {
-    console.log('ddddddd');
     this.props.navigation.navigate('Main')
   }
  
