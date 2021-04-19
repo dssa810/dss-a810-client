@@ -13,7 +13,6 @@ import Routes from './src/route/Routes.js';
 function App() {
   return (
     <Routes/>
-    // <NaviBottom/>
   );
 }
 
