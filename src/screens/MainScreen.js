@@ -1,13 +1,16 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
+import { useEffect } from 'react/cjs/react.production.min';
 
 function MainScreen() {
-  const { signOut } = React.useContext(AuthContext);
+  useEffect(() => {
+    if(!checkToken){
+      navigator.navigate('Login');
+    }
+  },[]);
 
   return (
     <View>
-      <Text>Signed in!</Text>
-      <Button title="Sign out" onPress={signOut} />
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Text style={{ fontSize: 30 }}>MainScreen!</Text>
       </View>
