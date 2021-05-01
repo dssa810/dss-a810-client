@@ -23,13 +23,22 @@ export class MainStore {
   };
 
   rootStore;
+
   constructor(root) {
     makeObservable(this, {
       main: observable,
       mainApi: action,
+      clearApi: action,
     });
     //어노테이션의 사용은 이후 Mobx 에서는 지양하는 사용법 // 위와 같은 방법으로
     this.rootStore = root;
+  }
+
+  clearApi() {
+    this.main = {
+      ...this.main,
+      point: 400,
+    };
   }
 
   mainApi() {

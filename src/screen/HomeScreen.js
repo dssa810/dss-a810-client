@@ -12,9 +12,11 @@ export const HomeScreen = observer(({navigation}) => {
   const {mainStore} = useStores();
   const [selectedIndex, setSelectedIndex] = React.useState(0);
   const [selectedIndex2, setSelectedIndex2] = React.useState(0);
+
   useEffect(() => {
     mainStore.mainApi();
   }, []);
+
   return (
     <SafeAreaView style={{flex: 1}}>
       <Layout style={{flex: 1, alignItems: 'center'}}>
