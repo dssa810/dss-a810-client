@@ -131,7 +131,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.dss_a810"
+        applicationId "com.helloworld"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
